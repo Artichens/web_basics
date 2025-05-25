@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorna_2</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <section class="section">
+   <div class="photo">
+    <div class="glass-container">
+        <div class="container">
+           <div class="tabs">
+              <a href="#" class="tab_active">Register</a>
+              <a href="#" class="tab">Log in</a>
+           </div>
+           <div class="logos">
+              <img src="iconApple.png" alt="logo" class="logoApple">
+              <img src="iconFacebook.png" alt="logo" class="logoFacebook">
+              <img src="iconGoogle.png" alt="logo" class="logoGoogle">
+           </div>
+           <p class="register">or register with email</p>
+           <div class="input-group">
+            <label for="email"></label>
+            <input type="email" id="email" placeholder="Email adress">
+            <span class="icon-check">✔</span>
+        </div>
+        <div class="input-group">
+            <label for="password"></label>
+            <input type="password" id="password" placeholder="Password">
+            <span class="icon-check">✔</span>
+            <span class="icon-eye" onclick="togglePassword()"></span>
+        </div>
+        <span class="register">+8 charters</span>
+        </div>
+        <div class="containerRight">
+            <div class="input-group">
+               <label for="name"></label>
+               <input type="name" id="name" placeholder="Full name">
+            </div>
+            <div class="gender-group">
+                <span><p class="gender">Gender:</p></span>
+                        <label class="custom_radio"><input type="radio" name="gender" value="male" class="radio">Male</label>
+                        <label class="custom_radio"><input type="radio" name="gender" value="female" class="radio">Female</label>
+           </div>
+           <p class="info-text"><b>&#8505; The phone number and birthday are only visible to you</b></p>
+           <div class="phone-section">
+            <select class="phone-code">
+              <option>+598</option>
+              <option>+380</option>
+              <option>+1</option>
+              <option>+44</option>
+            </select>
+            <input type="text" placeholder="Phone number" class="input-field">
+          </div>
+          <div class="birthday-section">
+            <label for="Optional">
+            <input type="date" class="input-field">
+            </label>
+            <span class="calendar-icon"></span>
+          </div>
+          <p class="birthday-info">
+            Let us know about your birthday so as not to miss a gift
+          </p>
+          <div class="create">
+            <button class="btn">Create account</button>
+            <div class="checkbox">
+                 <input type="checkbox" name="news" class="news">
+                Send me news and promotions
+            </div>
+            <p class="privacy">By continuing I agree with the <a href="#">Terms & Conditions</a>, <a href="#">Privacy Policy</a></p>
+        </div>
+        </div>
+    </div>
+    </div>
+   </div>
+  </section>
+</body>
+</html>
