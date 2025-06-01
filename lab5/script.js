@@ -1,4 +1,4 @@
-// ========== Плавная прокрутка для навигации ==========
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
@@ -12,7 +12,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// ========== Анимация при скролле ==========
 const animateOnScroll = () => {
   const elements = document.querySelectorAll('.section, .project-card, .skill-item');
   
@@ -26,11 +25,10 @@ const animateOnScroll = () => {
   });
 };
 
-// Запускаем при загрузке и при скролле
+
 window.addEventListener('load', animateOnScroll);
 window.addEventListener('scroll', animateOnScroll);
 
-// ========== Интерактивные карточки проектов ==========
 document.querySelectorAll('.project-card').forEach(card => {
   const url = card.getAttribute('data-url') || 
              card.querySelector('a')?.getAttribute('href');
@@ -39,7 +37,7 @@ document.querySelectorAll('.project-card').forEach(card => {
     card.style.cursor = 'pointer';
     
     card.addEventListener('click', (e) => {
-      // Не открываем ссылку если кликнули на кнопку
+    
       if(!e.target.classList.contains('project-btn') && 
          e.target.tagName !== 'A') {
         window.open(url, '_blank');
@@ -47,7 +45,7 @@ document.querySelectorAll('.project-card').forEach(card => {
     });
   }
   
-  // Анимация кнопки
+
   const btn = card.querySelector('.project-btn');
   if (btn) {
     card.addEventListener('mouseenter', () => {
@@ -60,7 +58,7 @@ document.querySelectorAll('.project-card').forEach(card => {
   }
 });
 
-// ========== Темный режим ==========
+
 const themeBtn = document.getElementById('theme-toggle');
 if (themeBtn) {
   themeBtn.addEventListener('click', () => {
@@ -69,13 +67,13 @@ if (themeBtn) {
       document.body.classList.contains('dark-mode') ? 'dark' : 'light');
   });
 
-  // Проверяем сохраненную тему
+
   if(localStorage.getItem('theme') === 'dark') {
     document.body.classList.add('dark-mode');
   }
 }
 
-// ========== Анимация навыков ==========
+
 document.querySelectorAll('.skill-item').forEach(item => {
   const img = item.querySelector('img');
   if (img) {
@@ -89,7 +87,7 @@ document.querySelectorAll('.skill-item').forEach(item => {
   }
 });
 
-// ========== Анимация фото в About ==========
+
 const aboutPhoto = document.querySelector('.about-photo');
 if (aboutPhoto) {
   aboutPhoto.addEventListener('mousemove', (e) => {
